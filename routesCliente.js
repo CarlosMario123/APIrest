@@ -15,6 +15,17 @@ routesCliente.get('/', (req, res)=>{
     })
 })
 
+routesCliente.get('/:nombre', (req, res)=>{
+    req.getConnection((err, conn)=>{
+        if(err) return res.send(err)
+
+        conn.query('SELECT Nombre_Tienda,Nombre_Cliente,Direccion,Localidad FROM Cliente WHERE Nombre_Cliente = ?',[req.params.nombre] ,(err, rows)=>{
+            if(err) return res.send(err)
+            res.json(rows)
+        })
+    })
+})
+
 routesCliente.post('/', (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
