@@ -11,11 +11,11 @@ app.set('port', process.env.PORT || 9000);
 
 const dbOptions = {
 
-    host: 'database-1.cr2asz0iu4ls.us-east-1.rds.amazonaws.com',
+    host: 'prueba.cgfgqrpgf8vd.us-east-1.rds.amazonaws.com',
     port:3306,
     user: 'admin',
     password: 'Lolasso2232',
-    database:'ProyectoIntegrador'
+    database:'proyecto'
 
 }
 
