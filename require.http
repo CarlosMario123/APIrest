@@ -1,8 +1,12 @@
-POST http://localhost:9000/api HTTP/1.1
-Content-Type: : application/json
+
+POST http://localhost:9000/Venta HTTP/1.1
+Content-Type: : header value
 
 {
-    "edificio": "pochita",
-    "número_aula": 123,
-    "capacidad": 23
+    "id_Venta":3,
+    "id_Cliente":1,
+    "id_Producto":1,
+    "Cantidad_Vendida":2,
+    "Total_Vendido":100,
+    "Fecha_entrega":"2023-07-01T06:00:00.000Z"
 }

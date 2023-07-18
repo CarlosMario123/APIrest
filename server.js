@@ -2,9 +2,9 @@ const express = require('express')
 const mysql = require('mysql');
 const cors = require('cors');
 const myconn = require('express-myconnection');
-const routesVenta = require('./routesVenta');
-const routesCliente = require('./routesCliente');
-const routesProducto = require('./routesProducto');
+const routesVenta = require('./routes/routesVenta');
+const routesCliente = require('./routes/routesCliente');
+const routesProducto = require('./routes/routesProducto');
 const app = express();
 
 app.set('port', process.env.PORT || 9000);
@@ -21,7 +21,7 @@ const dbOptions = {
 
     
 
-
+http:///localhost:9000/
 //middelwares--------------------------------------------
 app.use(myconn(mysql,dbOptions,'single'));
 app.use(express.json());
